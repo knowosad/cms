@@ -1,4 +1,6 @@
-package pl.com.bottega.cms.model;
+package pl.com.bottega.cms.model.repositories;
+
+import pl.com.bottega.cms.model.Cinema;
 
 /**
  * Created by freszczypior on 2017-12-22.

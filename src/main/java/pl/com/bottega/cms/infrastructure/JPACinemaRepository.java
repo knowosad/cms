@@ -2,7 +2,7 @@ package pl.com.bottega.cms.infrastructure;
 
 import org.springframework.stereotype.Component;
 import pl.com.bottega.cms.model.Cinema;
-import pl.com.bottega.cms.model.CinemaRepository;
+import pl.com.bottega.cms.model.repositories.CinemaRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;

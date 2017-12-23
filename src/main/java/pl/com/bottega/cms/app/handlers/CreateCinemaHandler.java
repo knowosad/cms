@@ -2,7 +2,7 @@ package pl.com.bottega.cms.app.handlers;
 
 import org.springframework.stereotype.Component;
 import pl.com.bottega.cms.model.Cinema;
-import pl.com.bottega.cms.model.CinemaRepository;
+import pl.com.bottega.cms.model.repositories.CinemaRepository;
 import pl.com.bottega.cms.model.commands.Command;
 import pl.com.bottega.cms.model.commands.CreateCinemaCommand;
 import pl.com.bottega.cms.model.commands.ValidateErrors;

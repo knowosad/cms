@@ -11,8 +11,7 @@ import java.util.Map;
 @Component
 public class ValidateErrors {
 
-        private Map<String, String> errors = new HashMap<>();
-
+    private Map<String, String> errors = new HashMap<>();
 
     public void add(String field, String error) {
         errors.put(field, error);
