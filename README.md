@@ -1,5 +1,7 @@
 # cms
 
+In progress
+
 Application for managing cinemas
 
 Hibernate, Spring
