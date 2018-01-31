@@ -22,4 +22,12 @@ public class JPAMovieRepository implements MovieRepository {
     public void save(Movie movie) {
         entityManager.persist(movie);
     }
+
+    @Override
+    public Movie get(Long id) {
+        Movie movie = entityManager.find(Movie.class, id);
+        if (movie == null)
+            throw new NoSuchEntityException();
+        return movie;
+    }
 }

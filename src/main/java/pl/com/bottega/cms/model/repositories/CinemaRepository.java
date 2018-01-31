@@ -10,4 +10,6 @@ public interface CinemaRepository {
     void save(Cinema cinema);
 
     boolean isExist(String name, String city);
+
+    Cinema get(Long id);
 }

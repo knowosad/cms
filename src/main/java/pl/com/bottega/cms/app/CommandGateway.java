@@ -29,19 +29,19 @@ public class CommandGateway {
         handler.handle(command);
     }
 
-    private Handler handlerFor(Command command) {
-        Map<String, Handler> handlers = applicationContext.getBeansOfType(Handler.class);
-        Optional<Handler> handler =
-                handlers.values().stream().filter((h) -> h.canHandle(command)).findFirst();
-        return handler.orElseThrow(() ->
-                new IllegalArgumentException("No handler found for " + command.getClass()));
-    }
-
     private void validate(Command command) {
         ValidateErrors errors = new ValidateErrors();
         command.validate(errors);
         if (errors.any()) {
             throw new CommandInvalidException(errors);
         }
+    }
+
+    private Handler handlerFor(Command command) {
+        Map<String, Handler> handlers = applicationContext.getBeansOfType(Handler.class);
+        Optional<Handler> handler =
+                handlers.values().stream().filter((h) -> h.canHandle(command)).findFirst();
+        return handler.orElseThrow(() ->
+                new IllegalArgumentException("No handler found for " + command.getClass()));
     }
 }

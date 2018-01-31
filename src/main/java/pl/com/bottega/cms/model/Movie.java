@@ -1,5 +1,7 @@
 package pl.com.bottega.cms.model;
 
+import pl.com.bottega.cms.model.commands.CreateMovieCommand;
+
 import javax.persistence.*;
 import java.util.List;
 

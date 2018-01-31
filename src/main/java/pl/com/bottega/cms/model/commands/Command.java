@@ -28,4 +28,10 @@ public interface Command {
         }
     }
 
+    default void validatePresence(ValidateErrors errors, String field, Long value){
+        if (value == null){
+            errors.add(field, "can't be blank");
+        }
+    }
+
 }

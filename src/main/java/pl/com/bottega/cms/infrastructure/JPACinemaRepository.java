@@ -2,6 +2,7 @@ package pl.com.bottega.cms.infrastructure;
 
 import org.springframework.stereotype.Component;
 import pl.com.bottega.cms.model.Cinema;
+import pl.com.bottega.cms.model.commands.CommandInvalidException;
 import pl.com.bottega.cms.model.repositories.CinemaRepository;
 
 import javax.persistence.EntityManager;
@@ -32,5 +33,13 @@ public class JPACinemaRepository implements CinemaRepository {
         query.setParameter("city", city);
         int amount = ((Long) query.getSingleResult()).intValue();
         return (amount > 0) ? true : false;
+    }
+
+    @Override
+    public Cinema get(Long cinemaId) {
+        Cinema cinema = entityManager.find(Cinema.class, cinemaId);
+        if (cinema == null)
+            throw new NoSuchEntityException();
+        return cinema;
     }
 }

@@ -1,13 +1,11 @@
 package pl.com.bottega.cms.ui.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.com.bottega.cms.app.CinemaFinder;
 import pl.com.bottega.cms.app.CommandGateway;
 import pl.com.bottega.cms.app.dtos.CinemaDto;
 import pl.com.bottega.cms.model.commands.CreateCinemaCommand;
+import pl.com.bottega.cms.model.commands.CreateShowsCommand;
 
 import java.util.List;
 
@@ -34,5 +32,11 @@ public class CinemaController {
     @GetMapping("/cinemas")
     public List<CinemaDto> getAll(){
         return finder.getAll();
+    }
+
+    @PutMapping("/cinemas/{cinemaId}/shows")
+    public void createShows(@PathVariable Long cinemaId, @RequestBody CreateShowsCommand cmd){
+        cmd.setCinemaId(cinemaId);
+        gateway.execute(cmd);
     }
 }
