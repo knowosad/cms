@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f5e21a2-5f81-426f-a05a-ecbbe7fb1816" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_8_10.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/handlers/CreateShowsHandler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/infrastructure/JPAShowRepository.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/infrastructure/NoSuchEntityException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/Show.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/ShowFactory.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/CreateShowsCommand.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/ShowsCalendar.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/repositories/ShowRepository.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cms.iml" afterPath="$PROJECT_DIR$/cms.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/CommandGateway.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/CommandGateway.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/infrastructure/JPACinemaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/infrastructure/JPACinemaRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/infrastructure/JPAMovieRepository.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/infrastructure/JPAMovieRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/Movie.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/Movie.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/Command.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/Command.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/repositories/CinemaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/repositories/CinemaRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/repositories/MovieRepository.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/repositories/MovieRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/ui/controllers/CinemaController.java" afterPath="$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/ui/controllers/CinemaController.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/app/CommandGateway.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/app/CommandGateway.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/infrastructure/JPACinemaRepository.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/infrastructure/JPACinemaRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/infrastructure/JPAMovieRepository.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/infrastructure/JPAMovieRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/model/Movie.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/model/Movie.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/model/commands/Command.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/model/commands/Command.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/model/repositories/CinemaRepository.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/model/repositories/CinemaRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/model/repositories/MovieRepository.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/model/repositories/MovieRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/ui/controllers/CinemaController.class" afterPath="$PROJECT_DIR$/target/classes/pl/com/bottega/cms/ui/controllers/CinemaController.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -81,8 +54,8 @@
       <file leaf-file-name="ShowFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/ShowFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="261">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,21 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CinemaController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/ui/controllers/CinemaController.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="266">
+              <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="73" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -113,43 +76,18 @@
       <file leaf-file-name="Show.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/Show.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
+            <state relative-caret-position="301">
               <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowsCalendar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/ShowsCalendar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-              <folding>
-                <element signature="e#1206#1207#0" expanded="true" />
-                <element signature="e#1252#1253#0" expanded="true" />
-                <element signature="e#1815#1816#0" expanded="true" />
-                <element signature="e#1878#1879#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandGateway.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/CommandGateway.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateShowsCommand.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreateShowsCommand.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/CreateShowsCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+            <state relative-caret-position="202">
+              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="e#2603#2604#0" expanded="true" />
                 <element signature="e#2659#2660#0" expanded="true" />
@@ -422,7 +360,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -881,12 +819,12 @@
       <workItem from="1517348567558" duration="1788000" />
       <workItem from="1517350626622" duration="1093000" />
       <workItem from="1517351895595" duration="1439000" />
-      <workItem from="1517353916858" duration="14644000" />
+      <workItem from="1517353916858" duration="15849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76792000" />
+    <option name="totallyTimeSpent" value="77997000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -902,7 +840,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -981,14 +919,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/CommandGateway.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
@@ -1270,14 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/infrastructure/CmsConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1302,14 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/handlers/CreateShowsHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/ValidateErrors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1328,10 +1242,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/CommandGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/ui/controllers/CinemaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/ShowsCalendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1815#1816#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/handlers/CreateShowsHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/Show.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/ShowFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="73" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/CreateShowsCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+        <state relative-caret-position="202">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="e#2603#2604#0" expanded="true" />
             <element signature="e#2659#2660#0" expanded="true" />
@@ -1358,61 +1343,6 @@
             <element signature="e#3914#3915#0" expanded="true" />
             <element signature="e#3954#3955#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/app/CommandGateway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/ShowsCalendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding>
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <element signature="e#1878#1879#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/Show.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/commands/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/model/ShowFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/com/bottega/cms/ui/controllers/CinemaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
