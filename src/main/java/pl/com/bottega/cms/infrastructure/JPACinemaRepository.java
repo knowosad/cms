@@ -26,8 +26,8 @@ public class JPACinemaRepository implements CinemaRepository {
     }
 
     @Override
-    public boolean isExist(String name, String city) {
-        Query query = entityManager.createQuery("" +
+    public boolean ifExist(String name, String city) {
+        Query query = entityManager.createQuery(
                 "select count (*) from Cinema c where c.name like :name and c.city like :city");
         query.setParameter("name", name);
         query.setParameter("city", city);

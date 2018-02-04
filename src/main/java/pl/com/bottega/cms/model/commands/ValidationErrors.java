@@ -9,9 +9,15 @@ import java.util.Map;
  * Created by freszczypior on 2017-12-22.
  */
 @Component
-public class ValidateErrors {
+public class ValidationErrors {
 
     private Map<String, String> errors = new HashMap<>();
+
+    public ValidationErrors() {
+    }
+
+    public ValidationErrors(String cinemaId, String error) {
+    }
 
     public void add(String field, String error) {
         errors.put(field, error);

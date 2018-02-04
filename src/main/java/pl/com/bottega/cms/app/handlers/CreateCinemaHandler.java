@@ -5,7 +5,7 @@ import pl.com.bottega.cms.model.Cinema;
 import pl.com.bottega.cms.model.repositories.CinemaRepository;
 import pl.com.bottega.cms.model.commands.Command;
 import pl.com.bottega.cms.model.commands.CreateCinemaCommand;
-import pl.com.bottega.cms.model.commands.ValidateErrors;
+import pl.com.bottega.cms.model.commands.ValidationErrors;
 
 import javax.transaction.Transactional;
 
@@ -15,10 +15,10 @@ import javax.transaction.Transactional;
 @Component
 public class CreateCinemaHandler implements Handler<CreateCinemaCommand> {
 
-    private ValidateErrors errors;
+    private ValidationErrors errors;
     private CinemaRepository repository;
 
-    public CreateCinemaHandler(ValidateErrors errors, CinemaRepository repository) {
+    public CreateCinemaHandler(ValidationErrors errors, CinemaRepository repository) {
         this.errors = errors;
         this.repository = repository;
     }
@@ -33,12 +33,12 @@ public class CreateCinemaHandler implements Handler<CreateCinemaCommand> {
 
     private void validateExist(CreateCinemaCommand command) {
         if (cinemaExist(command)){
-            errors.add(command.getName(), "such cinema already isExist");
+            errors.add(command.getName(), "such cinema already ifExist");
         }
     }
 
     private boolean cinemaExist(CreateCinemaCommand command) {
-        return repository.isExist(command.getName(), command.getCity());
+        return repository.ifExist(command.getName(), command.getCity());
     }
 
     @Override

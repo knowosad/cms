@@ -1,75 +1,82 @@
 package pl.com.bottega.cms.model.commands;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.Arrays;
+import java.util.Collection;
 import java.util.Set;
 
 /**
  * Created by freszczypior on 2017-12-25.
  */
+
+@Getter
+@Setter
 public class CreateShowsCommand implements Command {
-
-    private Long cinemaId;
-
-    private Long movieId;
+    private Long cinemaId, movieId;
 
     @JsonFormat(pattern = "yyyy/MM/dd HH:mm")
     private Set<LocalDateTime> dates;
 
     private ShowsCalendar calendar;
 
-    public void validate(ValidateErrors errors) {
+    @Override
+    public void validate(ValidationErrors errors) {
 
         validatePresence(errors, "cinemaId", cinemaId);
-        validatePresence(errors, "movieId", movieId);
+        validatePresence(errors, "id", movieId);
 
         if (bothDatesAndCalendarAreNull()) {
             errors.add("dates", "Both parameters can't be empty. Enter 'date' or 'calendar'.");
-            errors.add("movieId", "Both parameters can't be empty. Enter 'date' or 'calendar'.");
+            errors.add("calendar", "Both parameters can't be empty. Enter 'date' or 'calendar'.");
         }
         if (bothDatesAndCalendarAreNotNull()) {
             errors.add("dates", "Only one of the parameters 'date' or 'calendar' should be given.");
             errors.add("calendar", "Only one of the parameters 'date' or 'calendar' should be given.");
         }
         if (calendar != null) {
-            if (fromDateIsBeforeCurrentDate()) {
-                errors.add("fromDate", "FromDate should be a date in the future.");
-            }
-            if (fromDateIsAfterUntilDate()) {
-                errors.add("fromDate", "FromDate should be before UntilDate");
-            }
-//            if (hoursContainIncorrectValues()) {
-//                errors.add("hours", "All hours values should be between 00:00 and 23:59");
-//            }
-            if (weekDaysContainIncorrectValues()) {
-                errors.add("weekDays", "WeekDays should only contain valid names for the days of the week.");
-            }
+            validatePresence(errors, "fromDate", calendar.getFromDate());
+            validatePresence(errors, "untilDate", calendar.getUntilDate());
+            validatePresence(errors, "weekDays", calendar.getWeekDays());
+            validatePresence(errors, "hours", calendar.getHours());
+            validateFromDateValue(errors, calendar);
+            validateWeekDaysValue(errors, calendar);
         } else {
-            if (datesContainsPastValues()) {
-                errors.add("days", "All dates should be in the future");
-            }
+            validateDatesValue(errors, dates);
         }
     }
 
-    private Boolean datesContainsPastValues() {
-        return !dates.stream().allMatch((dateTime) -> dateTime.isAfter(LocalDateTime.now()));
+    private void validateDatesValue(ValidationErrors errors, Set<LocalDateTime> dates) {
+        if (!dates.stream().allMatch((dateTime) -> dateTime.isAfter(LocalDateTime.now()))) {
+            errors.add("days", "All dates should be in the future");
+        }
     }
 
-    private Boolean weekDaysContainIncorrectValues() {
-        return !calendar.getWeekDays().stream().allMatch((day) -> ifCorrectDayOfWeek(day));
+    private void validateWeekDaysValue(ValidationErrors errors, ShowsCalendar calendar) {
+        if (!calendar.getWeekDays().stream().allMatch((day) -> ifCorrectDayOfWeek(day))) {
+            errors.add("weekDays value", "WeekDays should only contain valid names for the days of the week.");
+        }
     }
 
     private Boolean ifCorrectDayOfWeek(String dayOfWeek) {
         try {
             DayOfWeek.valueOf(dayOfWeek.toUpperCase());
-        }catch (IllegalArgumentException ex){
+        } catch (IllegalArgumentException ex) {
             return false;
         }
         return true;
+    }
+
+    private void validateFromDateValue(ValidationErrors errors, ShowsCalendar calendar) {
+        if (calendar.getFromDate().isAfter(calendar.getUntilDate())) {
+            errors.add("fromDate value", "FromDate should be a date in the future.");
+        }
+        if (calendar.getFromDate().isBefore(LocalDateTime.now())) {
+            errors.add("fromDate value", "FromDate should be before UntilDate");
+        }
     }
 
     private Boolean bothDatesAndCalendarAreNotNull() {
@@ -78,22 +85,6 @@ public class CreateShowsCommand implements Command {
 
     private Boolean bothDatesAndCalendarAreNull() {
         return (dates == null || dates.isEmpty()) && calendar == null;
-    }
-
-    private Boolean hoursContainIncorrectValues() {
-        return calendar.getHours().stream().allMatch((time) -> (hoursValidation(time)));
-    }
-
-    private Boolean hoursValidation(LocalTime hour) {
-        return !hour.isBefore(LocalTime.MIN) && !hour.isAfter(LocalTime.MIN);
-    }
-
-    private Boolean fromDateIsAfterUntilDate() {
-        return calendar.getFromDate().isAfter(calendar.getUntilDate());
-    }
-
-    private Boolean fromDateIsBeforeCurrentDate() {
-        return calendar.getFromDate().isBefore(LocalDateTime.now());
     }
 
     public Long getCinemaId() {
@@ -112,7 +103,7 @@ public class CreateShowsCommand implements Command {
         this.movieId = movieId;
     }
 
-    public Set<LocalDateTime> getDates() {
+    public Collection<LocalDateTime> getDates() {
         return dates;
     }
 

@@ -6,13 +6,13 @@ package pl.com.bottega.cms.model.commands;
 public class CommandInvalidException extends RuntimeException {
 
 
-    private ValidateErrors errors;
+    private ValidationErrors errors;
 
-    public CommandInvalidException(ValidateErrors errors) {
+    public CommandInvalidException(ValidationErrors errors) {
         this.errors = errors;
     }
 
-    public ValidateErrors getErrors() {
+    public ValidationErrors getErrors() {
         return errors;
     }
 }

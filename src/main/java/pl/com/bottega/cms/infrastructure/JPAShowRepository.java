@@ -23,5 +23,13 @@ public class JPAShowRepository implements ShowRepository {
         entityManager.persist(show);
     }
 
+//    @Override
+//    public List<Show> get(Long cinemaId, LocalDateTime dateTime) {
+//        Query query = entityManager.createQuery(
+//                "select from Show s where s.cinema_id like :cinemaId and s.date_time like :dateTime");
+//        query.setParameter("cinemaId", cinemaId);
+//        query.setParameter("date_time", dateTime);
+//        return query.getResultList();
+//    }
 
 }

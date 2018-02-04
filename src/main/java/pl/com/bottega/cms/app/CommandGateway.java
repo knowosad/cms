@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import pl.com.bottega.cms.app.handlers.Handler;
 import pl.com.bottega.cms.model.commands.Command;
 import pl.com.bottega.cms.model.commands.CommandInvalidException;
-import pl.com.bottega.cms.model.commands.ValidateErrors;
+import pl.com.bottega.cms.model.commands.ValidationErrors;
 
 import java.util.Map;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public class CommandGateway {
     }
 
     private void validate(Command command) {
-        ValidateErrors errors = new ValidateErrors();
+        ValidationErrors errors = new ValidationErrors();
         command.validate(errors);
         if (errors.any()) {
             throw new CommandInvalidException(errors);

@@ -1,6 +1,9 @@
 package pl.com.bottega.cms.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Getter;
+import lombok.Setter;
+import pl.com.bottega.cms.app.dtos.ShowDtoBuilder;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -10,6 +13,8 @@ import java.time.LocalDateTime;
  */
 @Entity
 @Table(name = "shows")
+@Getter
+@Setter
 public class Show {
 
     @Id
@@ -22,6 +27,7 @@ public class Show {
     @ManyToOne
     private Movie movie;
 
+    @JsonFormat(pattern = "yyyy/MM/dd HH:mm")
     private LocalDateTime dateTime;
 
     public Show() {
@@ -31,5 +37,10 @@ public class Show {
         this.cinema = cinema;
         this.movie = movie;
         this.dateTime = dateTime;
+    }
+
+    public void export(ShowExporter exporter){
+        exporter.addId(id);
+        exporter.addTime(dateTime.toLocalTime());
     }
 }

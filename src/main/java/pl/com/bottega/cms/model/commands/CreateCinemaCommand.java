@@ -10,7 +10,7 @@ public class CreateCinemaCommand implements Command {
 
     private String city;
 
-    public void validate(ValidateErrors errors){
+    public void validate(ValidationErrors errors){
         validatePresence(errors, "name", name);
         validatePresence(errors, "city", city);
     }
