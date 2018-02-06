@@ -61,4 +61,8 @@ public class ShowsCalendar {
     private DayOfWeek convertToDayOfWeek(String weekDay) {
         return DayOfWeek.valueOf(weekDay.toUpperCase());
     }
+    public boolean hasAllFields() {
+        return (fromDate!=null&&untilDate!=null&&weekDays!=null&&hours!=null);
+    }
+
 }

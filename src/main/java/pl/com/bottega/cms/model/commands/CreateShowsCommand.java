@@ -42,22 +42,23 @@ public class CreateShowsCommand implements Command {
             validatePresence(errors, "untilDate", calendar.getUntilDate());
             validatePresence(errors, "weekDays", calendar.getWeekDays());
             validatePresence(errors, "hours", calendar.getHours());
-            validateFromDateValue(errors, calendar);
-            validateWeekDaysValue(errors, calendar);
-        } else {
+            if (calendar.hasAllFields()) {
+                validateFromDateValue(errors, calendar);
+                validateWeekDaysValue(errors, calendar);
+            }
+        } else if(dates != null)
             validateDatesValue(errors, dates);
-        }
     }
 
     private void validateDatesValue(ValidationErrors errors, Set<LocalDateTime> dates) {
         if (!dates.stream().allMatch((dateTime) -> dateTime.isAfter(LocalDateTime.now()))) {
-            errors.add("days", "All dates should be in the future");
+            errors.add("dates", "All dates should be in the future");
         }
     }
 
     private void validateWeekDaysValue(ValidationErrors errors, ShowsCalendar calendar) {
         if (!calendar.getWeekDays().stream().allMatch((day) -> ifCorrectDayOfWeek(day))) {
-            errors.add("weekDays value", "WeekDays should only contain valid names for the days of the week.");
+            errors.add("weekDays", "WeekDays should only contain valid names for the days of the week.");
         }
     }
 
@@ -72,10 +73,10 @@ public class CreateShowsCommand implements Command {
 
     private void validateFromDateValue(ValidationErrors errors, ShowsCalendar calendar) {
         if (calendar.getFromDate().isAfter(calendar.getUntilDate())) {
-            errors.add("fromDate value", "FromDate should be a date in the future.");
+            errors.add("fromDate", "FromDate should be a date in the future.");
         }
         if (calendar.getFromDate().isBefore(LocalDateTime.now())) {
-            errors.add("fromDate value", "FromDate should be before UntilDate");
+            errors.add("fromDate", "FromDate should be before UntilDate");
         }
     }
 
@@ -87,35 +88,4 @@ public class CreateShowsCommand implements Command {
         return (dates == null || dates.isEmpty()) && calendar == null;
     }
 
-    public Long getCinemaId() {
-        return cinemaId;
-    }
-
-    public void setCinemaId(Long cinemaId) {
-        this.cinemaId = cinemaId;
-    }
-
-    public Long getMovieId() {
-        return movieId;
-    }
-
-    public void setMovieId(Long movieId) {
-        this.movieId = movieId;
-    }
-
-    public Collection<LocalDateTime> getDates() {
-        return dates;
-    }
-
-    public void setDates(Set<LocalDateTime> dates) {
-        this.dates = dates;
-    }
-
-    public ShowsCalendar getCalendar() {
-        return calendar;
-    }
-
-    public void setCalendar(ShowsCalendar calendar) {
-        this.calendar = calendar;
-    }
 }
