@@ -2,6 +2,7 @@ package pl.com.bottega.cms.app.handlers;
 
 import org.springframework.stereotype.Component;
 import pl.com.bottega.cms.model.Cinema;
+import pl.com.bottega.cms.model.commands.CommandInvalidException;
 import pl.com.bottega.cms.model.repositories.CinemaRepository;
 import pl.com.bottega.cms.model.commands.Command;
 import pl.com.bottega.cms.model.commands.CreateCinemaCommand;
@@ -26,18 +27,19 @@ public class CreateCinemaHandler implements Handler<CreateCinemaCommand> {
     @Transactional
     @Override
     public void handle(CreateCinemaCommand command) {
-        validateExist(command);
+        validateCinemaExist(command);
         repository.save(new Cinema(command.getName(), command.getCity()));
 
     }
 
-    private void validateExist(CreateCinemaCommand command) {
-        if (cinemaExist(command)){
+    private void validateCinemaExist(CreateCinemaCommand command) {
+        if (cinemaAlreadyExist(command)){
             errors.add(command.getName(), "such cinema already ifExist");
+            throw new CommandInvalidException(errors);
         }
     }
 
-    private boolean cinemaExist(CreateCinemaCommand command) {
+    private boolean cinemaAlreadyExist(CreateCinemaCommand command) {
         return repository.ifExist(command.getName(), command.getCity());
     }
 

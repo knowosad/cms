@@ -1,12 +1,12 @@
 package pl.com.bottega.cms.model.commands;
 
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
-import java.util.Collection;
 import java.util.Set;
 
 /**

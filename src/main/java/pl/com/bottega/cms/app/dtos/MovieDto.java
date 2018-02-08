@@ -3,6 +3,7 @@ package pl.com.bottega.cms.app.dtos;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.ElementCollection;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,6 +12,8 @@ import java.util.stream.Collectors;
 @Getter
 @Setter
 public class MovieDto {
+
+    private Long id;
 
     private String title;
 
@@ -26,18 +29,17 @@ public class MovieDto {
 
     private List<ShowDto> shows;
 
+    public MovieDto() {
+    }
 
-    public MovieDto(String title, String description, List<String> actors, List<String> genres,
-                    Integer minAge, Integer length) {
+    public MovieDto(Long id, String title, String description, List<String> actors, List<String> genres, Integer minAge, Integer length) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.actors = actors;
         this.genres = genres;
         this.minAge = minAge;
         this.length = length;
-    }
-
-    public MovieDto() {
     }
 
     public void addShow(ShowDto show) {

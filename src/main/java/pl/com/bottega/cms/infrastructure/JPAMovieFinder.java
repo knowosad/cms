@@ -8,11 +8,14 @@ import pl.com.bottega.cms.app.dtos.ShowDtoBuilder;
 import pl.com.bottega.cms.model.Cinema;
 import pl.com.bottega.cms.model.Movie;
 import pl.com.bottega.cms.model.Show;
+
+
 import pl.com.bottega.cms.model.Show_;
 import pl.com.bottega.cms.model.commands.CommandInvalidException;
 import pl.com.bottega.cms.model.commands.ValidationErrors;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -85,6 +88,28 @@ public class JPAMovieFinder implements MovieFinder {
             movieDtosList.add(movieDto);
         }
         return movieDtosList;
+    }
+    @Override
+    public List<MovieDto> getAll() {
+        //TODO przy query nie widzi konstruktora MovieDto
+//        Query query = entityManager.createQuery(
+//                "select new pl.com.bottega.cms.app.dtos.MovieDto(m.id, m.title, m.description, m.actors, m.genres, m.minAge, m.length) from Movie m");
+//        return query.getResultList();
+
+        Query query = entityManager.createQuery("select m from Movie m");
+        List<Movie> movies = query.getResultList();
+        List<MovieDto> dtos = new LinkedList<>();
+        convertMovieListToMovieDtoList(movies, dtos);
+        return dtos;
+    }
+
+    private void convertMovieListToMovieDtoList(List<Movie> movies, List<MovieDto> dtos) {
+        MovieDto movieDto;
+        for (Movie movie: movies) {
+            movieDto = new MovieDto(movie.getId(), movie.getTitle(), movie.getDescription(), movie.getActors(),
+                    movie.getGenres(), movie.getMinAge(), movie.getLength());
+            dtos.add(movieDto);
+        }
     }
 
     private Predicate buildPredicate(Long cinemaId, LocalDate date, CriteriaBuilder cb, Root show) {

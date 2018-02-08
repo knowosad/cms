@@ -24,6 +24,7 @@ public class ShowsCalendar {
     @JsonFormat(pattern = "yyyy/MM/dd HH:mm")
     private LocalDateTime untilDate;
 
+    @Getter
     private Set<String> weekDays;
 
     private Set<LocalTime> hours;
